@@ -122,9 +122,7 @@ If there are any errors, discuss with your group members how to fix them.
 
 To submit, each group member should upload their CHILD document Rmd to the workshop page. 
 
-In addition, each group member should leave a comment on the workshop page that links to the group's GitHub repo. 
-
-From the commit history, we will be able to see who contributed to the repo.
+Remember to fill in the attribution section at the end of each child document, with your name and the link to the group's GitHub repo.
 
 # CHALLENGE (OPTIONAL)
 
