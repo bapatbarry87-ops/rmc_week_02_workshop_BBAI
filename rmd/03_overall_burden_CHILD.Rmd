@@ -17,7 +17,7 @@ data_overall_mini <- "WRITE_YOUR_CODE_HERE"
 
 ```{r}
 # Here render a table for the DALY burden over time for the three countries.
-# You should pivot the data wider to show each country in a separate column.
+# You should pivot the data wider to show each country in a separate column
 data_overall_wide <- "WRITE_YOUR_CODE_HERE"
 # Use kable() from the knitr package to render the table.
 ```
