@@ -2,7 +2,7 @@
 
 ```{r}
 # Load necessary packages
-pacman::p_load(tidyverse, knitr, here)
+pacman::p_load(tidyverse, knitr, here, kableExtra)
 
 # Import the non-communicable diseases data
 data_ncd <- read_csv(here("data/burden-of-disease-ncd.csv"))
@@ -28,7 +28,8 @@ data_ncd_wide <- data_ncd_mini %>%
   pivot_wider(names_from = Entity, values_from = DALYs)
 
 data_ncd_wide %>% 
-  kable()
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
 
 
 # Use kable() from the knitr package to render the table.
@@ -43,14 +44,20 @@ data_ncd_wide %>%
 
 data_ncd_mini %>% 
   ggplot(aes(x=Year, y=DALYs, color=Entity)) +
-  geom_line()
+  geom_line() +
+  labs(y = "DALYs lost", color = "Country")+
+  scale_color_manual(values=c("#CC6666", "#9999CC", "#66CC99"))
+  
 
 
 ```
 
 ## Summary of NCD Burden Findings
 
-Provide a brief analysis based on the data presented in the table and chart. Highlight any significant findings or patterns. About 3 sentences.
+In Ethiopia, the NCD burden (total DALYs lost) decreased significantly since the 90s.
+In Switzerland, a decrease was also reported but in a smaller scale.
+In Guinea, the NCD burden is stable since the 90s but a small decrease was identifed in the late 2010's. To be confirmed with updated data. 
+
 
 ## Attribution
 
